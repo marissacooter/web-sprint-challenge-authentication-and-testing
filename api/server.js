@@ -22,8 +22,5 @@ server.use(session({
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
 
-server.listen(port, () => {
-    console.log(`Running at http://localhost:${port} ...`)
-})
 
 module.exports = server;
